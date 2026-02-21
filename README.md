@@ -92,4 +92,222 @@ WtE governance effectiveness depends not only on technical performance but also 
 CGSS datasets are publicly available via the official CGSS website two years after completion.
 Experimental data collected via Credamo platform (access subject to project approval).
 
+## 1️⃣ Code and Data Usage (Stata Reproducibility Guide)
+
+This repository provides fully reproducible Stata code and experimental data for replicating all empirical results reported in the manuscript.
+
+---
+
+## 2️⃣ Software Requirements
+
+The analysis was conducted using:
+
+* Stata version 17 or higher
+* Required Stata package:
+
+```stata
+ssc install estout, replace
+```
+
+This package is used for exporting regression and descriptive statistics tables.
+
+---
+
+## 3️⃣ Data File
+
+The experimental dataset is provided as:
+
+```text
+Supplementary experimental dataset (n = 1,711).dta
+```
+
+This dataset contains:
+
+* Experimental group assignment (`group`)
+* Independent variables:
+
+  * bureaucrat motivated WtE condition
+  * social equity perception condition
+* Mediator variable:
+
+  * mediator (perceived predictability)
+* Outcome variable:
+
+  * y (behavioral or evaluative outcome)
+* Control variables:
+
+  * control_1
+  * control_2
+  * control_3
+  * control_4
+* Demographic variables
+
+---
+
+## 4️⃣ How to Run the Analysis
+
+Before running the code, open Stata and set the working directory to the project folder:
+
+```stata
+cd "YOUR_PROJECT_FOLDER_PATH"
+```
+
+Then load the dataset:
+
+```stata
+use "Supplementary experimental dataset (n = 1,711).dta", clear
+```
+
+---
+
+## 5️⃣ Code Files and Their Functions
+
+Run the following `.do` files in numerical order:
+
+---
+
+### 01_descriptive_statistics_and_balance.do
+
+Purpose:
+
+* Generates group sample size tables
+* Generates descriptive statistics for demographic variables and controls
+* Performs balance checks across experimental groups
+
+Output:
+
+```text
+results/
+0_group_sample_size.rtf
+1_demographics_and_controls_summary.rtf
+```
+
+---
+
+### 02_anova_and_regression_main_interaction.do
+
+Purpose:
+
+* Estimates main effects of:
+
+  * bureaucrat motivated WtE
+  * social equity perception
+* Estimates interaction effects
+* Equivalent to two-way ANOVA and regression models
+
+Output:
+
+```text
+results/
+2_anova_basic_results.rtf
+```
+
+---
+
+### 03_mediation_bureaucrat_motivated_WtE.do
+
+Purpose:
+
+Tests mediation pathway:
+
+```text
+bureaucrat motivated WtE → mediator → y
+```
+
+Includes:
+
+* Total effect estimation
+* Direct effect estimation
+* Bootstrap indirect effect test
+
+Output:
+
+```text
+results/
+3_mediation_X1_bureaucrat_motivated_WtE.rtf
+```
+
+---
+
+### 04_mediation_social_equity_perception.do
+
+Purpose:
+
+Tests mediation pathway:
+
+```text
+social equity perception → mediator → y
+```
+
+Includes:
+
+* Total effect estimation
+* Direct effect estimation
+* Bootstrap indirect effect test
+
+Output:
+
+```text
+results/
+4_mediation_X2_social_equity_perception.rtf
+```
+
+---
+
+## 6️⃣ Output Files
+
+All results will be automatically exported to:
+
+```text
+/Users/yiningtang/Desktop/results/
+```
+
+You may modify the output directory in each `.do` file:
+
+```stata
+local outdir "YOUR_OUTPUT_DIRECTORY"
+```
+
+---
+
+## 7️⃣ Experimental Design Structure
+
+Experimental groups are coded as:
+
+| Group | bureaucrat motivated WtE | social equity perception |
+| ----- | ------------------------ | ------------------------ |
+| 1     | High                     | High                     |
+| 2     | High                     | Low                      |
+| 3     | Low                      | High                     |
+| 4     | Low                      | Low                      |
+| 5     | Control group            |                          |
+
+---
+
+## 8️⃣ Full Replication
+
+To fully replicate all results:
+
+Run in order:
+
+```stata
+do 01_descriptive_statistics_and_balance.do
+do 02_anova_and_regression_main_interaction.do
+do 03_mediation_bureaucrat_motivated_WtE.do
+do 04_mediation_social_equity_perception.do
+```
+
+---
+
+## 9️⃣ Reproducibility Statement
+
+All reported results in the manuscript can be reproduced directly using the provided dataset and Stata scripts without modification.
+
+---
+
+```text
+master.do
+```
+
+
 
