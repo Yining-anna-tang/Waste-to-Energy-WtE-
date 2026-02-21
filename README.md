@@ -2,6 +2,7 @@
 This repository contains the empirical materials, variable documentation, and analytical framework for the study:
 “Bureaucrat Incentives Embedded in Waste-to-Energy (WtE) Combustion Enhance Local Government Performance Competitiveness.”
 China leads global waste-to-energy (WtE) capacity expansion, accounting for approximately 38.4%–50.0% of total installed capacity worldwide. Unlike existing studies that emphasize technical efficiency or carbon reduction outcomes, this project investigates the political and institutional consequences of embedding WtE expansion into bureaucratic performance evaluation systems.
+
 Drawing on:
 A nationally representative survey dataset (CGSS 2021, n = 8,148)
 A supplementary experimental dataset (n = 1,711)
@@ -45,25 +46,25 @@ ILE	Improvement of Living Environment
 Constructed from CGSS items H6 (5-year comparison) and H7 (10-year comparison), capturing perceived environmental improvement over time.
 📌 Additional Input Variables
 #	Abbreviation	Description
-2	EPPD	Environmental protection purchase decision
-3	EAI	Environmental awareness index
-4	FACEI	Family action on community environmental issues
-5	EPSP	Environmental protection social participation
-6	UFSC	Urban food safety concerns
-7	WPIC	Water pollution impact on community
-8	WEP_Tax	Willingness to environmental protection tax
-9	UW_RNR	Unwillingness to reduce natural resources for economic development
-10	EWIC	Extreme weather impact on community
-11	ECK	Environmental cause knowledge
-12	ESA	Environmental stewardship awareness
-13	ESK	Environmental strategy knowledge
-14	APIC	Air pollution impact on community
-15	EPK	Environmental policy knowledge
-16	AUGP	Acceptance of urban green penalties
-17	REnth	Recycling enthusiasm
-18	WWGD	Willingness to work on garbage disposal
-19	SEP	Social equity perception
-20	TFC	Traditional family concept
+EPPD	Environmental protection purchase decision
+EAI	Environmental awareness index
+FACEI	Family action on community environmental issues
+EPSP	Environmental protection social participation
+UFSC	Urban food safety concerns
+WPIC	Water pollution impact on community
+WEP_Tax	Willingness to environmental protection tax
+UW_RNR	Unwillingness to reduce natural resources for economic development
+EWIC	Extreme weather impact on community
+ECK	Environmental cause knowledge
+ESA	Environmental stewardship awareness
+ESK	Environmental strategy knowledge
+APIC	Air pollution impact on community
+EPK	Environmental policy knowledge
+AUGP	Acceptance of urban green penalties
+REnth	Recycling enthusiasm
+WWGD	Willingness to work on garbage disposal
+SEP	Social equity perception
+TFC	Traditional family concept
 
 🧠 Theoretical Contributions
 This study offers three major contributions:
@@ -75,8 +76,20 @@ Interaction of Equity and Governance Performance
 Identifies social equity perception as a key moderating factor that amplifies environmental governance evaluation.
 
 🛠 Methodological Framework
-Machine learning models (CatBoost + Random Forest hybrid)
+Machine learning models
 SHAP interpretability analysis
 Regression and interaction models
 fsQCA configurational causality analysis
 Likert-scale measurement operationalization
+
+🔬 Policy Implications
+Environmental infrastructure can function as a political signaling mechanism.
+Visible environmental gains enhance bureaucratic promotion competitiveness.
+Equity perception is critical for sustaining public support.
+WtE governance effectiveness depends not only on technical performance but also on political incentive alignment.
+
+📎 Data Availability
+CGSS datasets are publicly available via the official CGSS website two years after completion.
+Experimental data collected via Credamo platform (access subject to project approval).
+
+
