@@ -10,7 +10,7 @@ we examine how perceived environmental improvement enhances:
 Government environmental governance satisfaction (SGEG)
 Local government performance competitiveness
 Bureaucratic political competitiveness under promotion-based incentive systems
-Our findings show that visible environmental improvements strengthen perceived governance performance (R² = 0.584, p < 0.001), and that perceived social equity (SEP) amplifies this effect.
+Our findings show that visible environmental improvements strengthen perceived governance performance, and that perceived social equity (SEP) amplifies this effect.
 
 🎯 Research Questions
 Does perceived environmental improvement enhance local government performance competitiveness?
